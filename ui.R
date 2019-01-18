@@ -44,16 +44,26 @@ ui <- fluidPage(
                                                 selected = "head")
                                    ),
                             column(2, 
-                                   sliderInput("nbr_of_rec", "Number of Records",
+                                   sliderInput("nbr_of_rec", "Number of Records to Display",
                                                1, 500, 10, step = 1)
                                    
                                    )
                           ),
+                          h4("Quick Display for Selected Variables:"),
+                          verbatimTextOutput("placeholder"),
                           DT::dataTableOutput("contents"),
+                          h4("Quick Summary for Selected Variables:"),
                           verbatimTextOutput("summary1")
                           
                           ),
-                 tabPanel("Data Summary"),
+                 tabPanel("Distribution Analysis", 
+                          selectInput('si2', 'Select a Variable', choices = "No Data Available", selected = "No Data Available"),
+                          h4("Data Summary:"),
+                          verbatimTextOutput("summary2"),
+                          h4("Frequency/Histgram Plot:"),
+                          plotOutput('freqplot')
+                          
+                          ),
                  tabPanel("Table")
       
       
