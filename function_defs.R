@@ -4,7 +4,7 @@
 # x_name <- "EXT_SOURCE_2"
 
 ## function definitions are here
-
+ 
 na_cnt <- function(x){
   return(sum(is.na(x)))
 }
