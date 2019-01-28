@@ -1,4 +1,7 @@
 library(shiny)
+library(entropy)
+library(dplyr)
+library(shinycssloaders)
 
 # Define UI for data upload app ----
 ui <- fluidPage(
