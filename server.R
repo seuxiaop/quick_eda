@@ -8,12 +8,14 @@
 library(shiny)
 library(entropy)
 library(dplyr)
+library(DT)
 library(shinycssloaders)
 
 options(shiny.maxRequestSize = 300*1024^2) # max file size 300 MB
 options(spinner.color.background="#F5F5F5") # set spinner backgroud
 
 source("plot functions.R")
+source("function_defs.R")
 
 shinyServer(function(input, output, session) {
    
